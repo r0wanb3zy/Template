@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bezy</title>
+    <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <!-- Include Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Content Section -->
+    <div class="content-wrapper">
+        <h1 class="main-title">3D Print & Design</h1>
+        <p class="main-paragraph">We specialize in high-quality 3D printed products, custom 3D printing services, and CAD design solutions. Whether you need a prototype, a unique part, or full design assistance, we bring your vision to life with precision and creativity.</p>
+    </div>
+
+    <!-- Overlay for Dimming Effect -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Include Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async function () {
+    // JavaScript to dynamically load header and footer
+    document.getElementById("header-placeholder").innerHTML = await fetch('header.html').then(response => response.text());
+    document.getElementById("footer-placeholder").innerHTML = await fetch('footer.html').then(response => response.text());
+});
+    </script>
+        <!-- JavaScript for Hamburger and Menu Toggle -->
+        <script src="assets/js/script.js"></script>
+</body>
+</html>
